@@ -307,8 +307,6 @@ button:focus:not(:focus-visible){outline:none}
     <input class="auth-input" id="login-password" type="password" placeholder="••••••••"
       autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()">
     <button class="auth-btn" id="login-btn" onclick="doLogin()">Entrar →</button>
-    <div class="auth-divider"></div>
-    <button class="auth-btn-sec" id="toggle-mode-btn" onclick="toggleAuthMode()">Criar conta nova</button>
     <div class="auth-hint" style="margin-top:12px">
       <a onclick="showSetup()">⚙ Reconfigurar Supabase</a>
     </div>
@@ -379,8 +377,8 @@ let db = null;
 
 function getConfig(){
   return {
-    url: localStorage.getItem('cmvpro_sb_url')||'',
-    key: localStorage.getItem('cmvpro_sb_key')||''
+    url: localStorage.getItem('cmvpro_sb_url')||'https://vficexhhxdtpezlnradc.supabase.co',
+    key: localStorage.getItem('cmvpro_sb_key')||'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZmaWNleGhoeGR0cGV6bG5yYWRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4ODU3NDgsImV4cCI6MjA5MjQ2MTc0OH0.Xk3JA35-Q3KAVLgKJ36VL-XYt4gsmdt4-Srnx3fpSu0'
   };
 }
 
